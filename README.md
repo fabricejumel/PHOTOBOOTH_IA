@@ -38,4 +38,4 @@ nvtop
 
 ### je propose un layout photobooth pour terminator inclu dans le repo...
 
-![Exemple Desktop](Exemple_desktop.png)
+![Exemple Desktop](Exemple_Desktop.png)
