@@ -1,9 +1,9 @@
-## PHOTOBOOTH_IA
-#Installer  ComfyUI dans wp_comfyui
-#Installer ce repo dans un wp_photobooth
-# 4 terminals
-# terminator, " 3 horizontaux, 4eme vertical a coté des 3
-# créer le venv venv_photobooth_venv la premiere fois et installer les requirements requirements.txt
+#, PHOTOBOOTH_IA
+## Installer  ComfyUI dans wp_comfyui
+## Installer ce repo dans un wp_photobooth
+## 4 terminals
+### terminator, " 3 horizontaux, 4eme vertical a coté des 3
+### créer le venv venv_photobooth_venv la premiere fois et installer les requirements requirements.txt
 
 ```bash
 #terminal 1, necessite l installation de comfyui et le model SDXL BASE 1 
