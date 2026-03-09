@@ -1,0 +1,60 @@
+[global_config]
+  window_state = maximise
+[keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.9
+    background_type = transparent
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+  [[photobooth]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+      position = 0:1280
+      size = 1080, 640
+    [[[hpaned0]]]
+      type = HPaned
+      parent = window0
+      ratio = 0.45
+    [[[vpaned0]]]
+      type = VPaned
+      parent = hpaned0
+      order = 0
+      ratio = 0.333
+    [[[terminal1]]]
+      type = Terminal
+      parent = vpaned0
+      order = 0
+      command = 'bash -c "cd ~/wp_comfui && source comfyui-env/bin/activate && cd ~/wp_comfui/ComfyUI && python main.py --listen 0.0.0.0; bash"'
+      title = ComfyUI Server
+    [[[vpaned1]]]
+      type = VPaned
+      parent = vpaned0
+      order = 1
+      ratio = 0.5
+    [[[terminal2]]]
+      type = Terminal
+      parent = vpaned1
+      order = 0
+      command = 'bash -c "sleep 3 && cd ~/wp_photobooth && source venv_photobooth_venv/bin/activate &&  python A1111_comfyui_proxy_v3.py; bash"'
+      title = Proxy A1111
+    [[[terminal3]]]
+      type = Terminal
+      parent = vpaned1
+      order = 1
+      command = 'bash -c "sleep 5 && cd ~/wp_photobooth && source venv_photobooth_venv/bin/activate && python CPE_FINAL_Photobooth_scn.py; bash"'
+      title = Photobooth
+    [[[terminal4]]]
+      type = Terminal
+      parent = hpaned0
+      order = 1
+      command = 'bash -c "sleep 2 && nvtop; bash"'
+      title = nvtop GPU
+[plugins]
